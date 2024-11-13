@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333;
+    font-family: Arial, sans-serif;
+    padding: 20px; /* Add some padding for smaller screens */
+}
+
+.card {
+    width: 100%; /* Set width to 100% initially */
+    max-width: 350px; /* Maximum width for larger mobile devices */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    position: relative;
+}
+
+.card-image {
+    width: 100%;
+    height: 200px; /* Increased height for a taller look */
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.date {
+    color: #3d5a80;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.post-title {
+    font-size: 22px; /* Slightly larger title */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.post-description {
+    font-size: 14px;
+    color: #757575;
+    line-height: 1.5;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    background-color: #3d5a80;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #757575;
+}
+
+.footer-item {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+.footer-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #757575;
+}
+
+.footer-item span {
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 320px; /* Slightly narrower on smaller screens */
+    }
+
+    .post-title {
+        font-size: 20px;
+    }
+
+    .post-description {
+        font-size: 13px;
+    }
+
+    .card-footer {
+        padding: 10px 0;
+    }
+}
+
+
+
